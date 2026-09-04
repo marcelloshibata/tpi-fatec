@@ -17,18 +17,17 @@ public class Quadrado {
         this.resultado = resultado;
     }
 
-    public double calcularQuadrado() {
+    public void calcularQuadrado() {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Digite um número para elevar ao quadrado: ");
         setNumero(input.nextDouble());
-        input.close();
         setResultado(Math.pow(getNumero(), 2));
         
-        return getResultado();
+        input.close();
     }
 
     public void mostrarQuadrado() {
-        System.out.printf("O valor de %.2f ao quadrado é igual a %.2f", getNumero(), calcularQuadrado());
+        System.out.println("O valor de " + getNumero() + " ao quadrado é: " + getResultado());
     }
 }
